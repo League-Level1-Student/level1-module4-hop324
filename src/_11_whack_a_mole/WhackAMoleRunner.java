@@ -10,6 +10,6 @@ public static void main(String[] args) {
 	Random jerry = new Random();
 	WhackAMole X = new WhackAMole();
 	X.drawButtons(jerry);
-	JOptionPane.showMessageDialog(null, "Hi");
+	
 }
 }
