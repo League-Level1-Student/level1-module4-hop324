@@ -77,7 +77,7 @@ public class SlotMachine implements ActionListener {
 			panel1.add(are);
 			frame.pack();
 		}
-		else {
+		else if(firstSlide == 2){
 			panel1.add(Bad);
 			frame.pack();
 		}
@@ -89,7 +89,7 @@ public class SlotMachine implements ActionListener {
 			panel2.add(are);
 			frame.pack();
 		}
-		else {
+		else if(secondSlide == 2){
 			panel2.add(Bad);
 			frame.pack();
 		}
@@ -101,17 +101,14 @@ public class SlotMachine implements ActionListener {
 			panel3.add(are);
 			frame.pack();
 		}
-		else {
+		else if(thirdSlide == 2){
 			panel3.add(Bad);
 			frame.pack();
 		}
-		yeet = panel1.getComponents();
-		yote = panel2.getComponents();
-		yagga = panel3.getComponents();
-		if(yeet == you && yote == are && yagga == Bad) {
-			JOptionPane.showMessageDialog(null, "You got lucky! And You Are Bad");
+		if(firstSlide == 0 && secondSlide == 1 && thirdSlide == 2) {
+			JOptionPane.showMessageDialog(null, "You win! But you're also bad");
 		}
-		
+
 	}
     
 	
