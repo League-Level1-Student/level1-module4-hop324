@@ -30,7 +30,7 @@ public class Yagga implements ActionListener {
 	int playerHealth = 10;
 	int playerDamage = 3;
 	int playerDamageMod = 1;
-	int playerIntiative = 4;
+	int playerInitiative = 4;
 	
 	int goblinHealth = 3;
 	int goblinDamage = 2;
@@ -139,23 +139,27 @@ public class Yagga implements ActionListener {
 		
 		//Creating Individuals
 		for(int k = numberOfSwords; k > 0; k--) {
-			Yagga jeff = new Yagga("Jeffery: " + k);
+			
 		}
 		//Creating Individuals
 		
 		//Starting Encounter
 		JOptionPane.showMessageDialog(null, "Herble Gerble, Goblin Attack!");
-		for(int i = numberOfGoblins; i > 0; i--) {
 			goblinInitiative = randy.nextInt(6);
-		}
+			while(numberOfGoblins > 0) {
+				if(playerInitiative >= goblinInitiative) {
+					String action = JOptionPane.showInputDialog("Choose action: Attack, Magic, Run");
+					if(action.equalsIgnoreCase("Attack")) {
+						if(numberOfGoblins > 1) {
+							JOptionPane.showInputDialog("Which goblin? There are: " + numberOfGoblins + " remaining.");
+						}
+					}
+				}
+			}
 	}
 	
 	
-	 public Yagga(String name) {
-		Random gherg = new Random();
-		int initiative = gherg.nextInt(6);
-		if(name.contentEquals(cs))
-	}
+
 	
 	
 	
@@ -176,6 +180,10 @@ public class Yagga implements ActionListener {
 		else if(e.getSource() == right) {
 			directionalValue = 3;
 		}
+		
+	}
+	
+	public void goblin(String name) {
 		
 	}
 	
